@@ -93,7 +93,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start(&htim1);
   lcd_init();
-  lcd_send_string("Hello World");
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -103,7 +103,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
+    lcd_send_string("Hello World");
+    HAL_Delay(1000);
+    lcd_send_cmd(0x01);
+    HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }

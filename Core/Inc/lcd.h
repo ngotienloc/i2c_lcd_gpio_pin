@@ -3,7 +3,7 @@
 
 #include "main.h"
 #include "i2c.h"
-#define lcd_addr 0x27 << 1
+#define lcd_addr 0x27
 #define lcd_bl 0x08 
 void lcd_init(); 
 void lcd_send_cmd(char cmd);
